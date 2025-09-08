@@ -112,41 +112,12 @@ body {
     overflow: hidden;
 }
 
-.hero-bg-pattern {
-    position: absolute;
-    inset: 0;
-    opacity: 0.1;
-}
-
-.bg-circle {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(60px);
-}
-
-.bg-circle-1 {
-    top: 5rem;
-    left: 2.5rem;
-    width: 8rem;
-    height: 8rem;
-    background: #f9a8d4;
-}
-
-.bg-circle-2 {
-    bottom: 5rem;
-    right: 2.5rem;
-    width: 10rem;
-    height: 10rem;
-    background: #fed7aa;
-}
-
 .hero-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 6rem 1rem 4rem;
     position: relative;
-    z-index: 10;
-    
+    z-index: 10;    
 }
 
 .signup-btn-container {
@@ -171,8 +142,7 @@ body {
 
 .hero-header {
     text-align: center;
-    margin-bottom: 4rem;
-    
+    margin-bottom: 4rem; 
 }
 
 .hero-title {
@@ -577,8 +547,4 @@ body {
     .contatos-header h2 {
         font-size: 6rem;
     }
-}
-
-html {
-    scroll-behavior: smooth;
 }
