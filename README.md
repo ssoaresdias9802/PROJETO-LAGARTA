@@ -207,33 +207,250 @@ Com media queries, o layout se adapta a diferentes tamanhos de tela.
 
 ### index.html
 
-#### O arquivo HTML contém a estrutura básica do formulário de cadastro, que inclui os seguintes campos:
+#### Cabeçalho do dcoumento
 
-    - Nome: Um campo de texto para o nome completo do usuário.
+O <head> contém informações importantes sobre a página, como:
 
-    - Telefone: Um campo de entrada para o número de telefone, com máscara no formato (99) 99999-9999.
+- codificação de caracteres (UTF-8) para suportar acentos;
 
-    - E-mail: Um campo de entrada para o endereço de e-mail.
+- meta viewport para responsividade em dispositivos móveis;
 
-    - CEP: Um campo de entrada para o código postal (CEP), com máscara 00000-000.
+- título da página que aparece na aba do navegador;
 
-    - O formulário também possui dois botões:
+- links para arquivos de estilo (CSS) e fontes externas.
 
-    - Voltar: Um botão que utiliza o comando history.back() para voltar à página anterior.
 
-    - Enviar: Um botão para enviar os dados do formulário. A validação de preenchimento dos campos ocorre antes de enviar o formulário.
+    <head>
+      
+      <meta charset="UTF-8">
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+      <title>Formulário de Cadastro</title>
+  
+      <link rel="stylesheet" href="formulario.css">
+  
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  
+    </head>
+
+
+    
+
+## Estrutura Formulário
+
+O   form   é o elemento que engloba os campos de entrada e os botões de envio.
+A classe form-card serve para aplicar estilo no CSS, como sombra, padding e bordas arredondadas.
+
+
+    <form class="form-card">
+      <h2>Formulário de Cadastro</h2>
+      
+
+## Campos de entrada (nome, telefone, e-mail, CEP)
+
+Cada campo é composto por um label e um input:
+
+- label descreve o campo e melhora a acessibilidade.
+
+- for="id" conecta o label ao input correspondente.
+
+- input define o tipo de dado que será digitado e possui atributos como required para obrigar o preenchimento e placeholder para mostrar um exemplo de formato.
+
+
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="cep">CEP:</label>
+      <input type="text" id="cep" name="cep" placeholder="00000-000" required>
+
+
+## Botões do formulário
+
+Os botões permitem ações do usuário:
+
+- Voltar: botão que retorna à página anterior sem submeter o formulário (type="button" + onclick="history.back()").
+
+- Enviar: botão que envia os dados do formulário (type="submit").
+
+
+      <div class="btns">
+        <button type="button" class="voltar"  onclick="history.back()">Voltar</button>
+        <button type="submit" class="enviar">Enviar</button>
+      </div>
+  
+
+
+
+
 
 ### style.css
 
 #### O arquivo CSS fornece o estilo visual do formulário, incluindo:
+-Remove margens padrão, define fonte base e define fundo rosado (#ffeaf2).
 
-    - Layout responsivo: O formulário se adapta automaticamente a diferentes tamanhos de tela, como dispositivos móveis e desktop.
-          
 
-    - Botões com animação: Os botões têm um efeito de hover que altera a cor quando o usuário passa o mouse sobre eles.
-          
-    - Caixas de entrada com bordas arredondadas e transições suaves.
 
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffeaf2;
+    }
+
+
+
+    
+- Usa Flexbox para centralizar o conteúdo horizontal e verticalmente; padding adiciona espaço ao redor (60px top/bottom, 20px sides).
+
+  
+
+        .form-card {
+      background: rgba(255, 255, 255, 0.95);
+      
+      .formulario-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 20px;
+      }
+
+        .form-card {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+- .form-card é o cartão branco do formulário:
+
+- background semitransparente (fica levemente com o fundo rosado visível).
+
+- padding interno, border-radius canto arredondado.
+
+- max-width: 500px limita a largura em telas grandes; width:100% faz encolher em telas menores.
+
+- box-shadow cria profundidade.
+
+- display:flex em coluna e gap separa os elementos verticalmente.
+
+
+### Título com a fonte do Google, tamanho e cor.
+
+    .form-card h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    
+### Estilo dos rótulos (labels).
+
+    .form-card label {
+      font-weight: bold;
+      font-size: 14px;
+      color: #444;
+    }
+
+
+### Inputs com espaçamento interno, borda sutil e raio; width:100% ocupa o espaço da coluna. :focus altera a borda quando o usuário clica (feedback visual).    
+
+
+    .form-card input {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      width: 100%;
+      outline: none;
+      transition: border 0.3s;
+    }
+    .form-card input:focus {
+      border: 1px solid #ff6f91;
+      
+
+    }
+
+
+
+### Botões alinhados lado a lado com mesmo tamanho (flex:1).
+
+    
+    .btns {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+    .btns button {
+      flex: 1;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .enviar {
+      background-color: #ff6f91;
+      color: white;
+    }
+    .enviar:hover {
+      background-color: #ff4e75;
+    }
+    .voltar {
+      background-color: #ddd;
+      color: #333;
+    }
+    .voltar:hover {
+      background-color: #bbb;
+    }
+
+
+- .enviar rosa com hover mais escuro, .voltar cinza com hover.
+
+
+
+### Media query para telas menores:
+
+    @media (max-width: 600px) {
+  
+      .form-card {
+  
+        padding: 20px;
+  
+      }
+  
+      .form-card h2 {
+  
+        font-size: 22px;
+  
+      }
+  
+      .btns {
+  
+        flex-direction: column;
+  
+      }
+  
+    }
+
+
+
+- Menos padding, título menor.
+
+-Botões empilham verticalmente (flex-direction: column) para facilitar toque em celulares.
 
 ### Integrantes: 
 Gabriel Souza Martins RA: 10723188 \
