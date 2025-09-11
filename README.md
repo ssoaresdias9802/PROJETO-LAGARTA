@@ -15,7 +15,7 @@ De início, pensamos em um site e-commerce, o qual irá abrangir:
 <img width="1366" height="3586" alt="wireframe" src="https://github.com/user-attachments/assets/abc81f80-497b-4709-94e1-a9ef8c678a6d" />
 
 # Tutorial
-## 1. Estrutura em HTML
+## 1. Estrutura em HTML do Index
 
 O HTML organiza o conteúdo do site em seções bem definidas.
 ### Cabeçalho e Navegação
@@ -194,6 +194,46 @@ Com media queries, o layout se adapta a diferentes tamanhos de tela.
     .mobile-menu-btn {
         display: none;
     }
+
+
+
+## 2. Estrutura do Formulário
+
+### O projeto é composto por dois arquivos principais:
+
+    - index.html: Arquivo HTML contendo a estrutura do formulário.
+
+    - style.css: Arquivo CSS responsável pelo estilo e layout do formulário.
+
+### index.html
+
+#### O arquivo HTML contém a estrutura básica do formulário de cadastro, que inclui os seguintes campos:
+
+    - Nome: Um campo de texto para o nome completo do usuário.
+
+    - Telefone: Um campo de entrada para o número de telefone, com máscara no formato (99) 99999-9999.
+
+    - E-mail: Um campo de entrada para o endereço de e-mail.
+
+    - CEP: Um campo de entrada para o código postal (CEP), com máscara 00000-000.
+
+    - O formulário também possui dois botões:
+
+    - Voltar: Um botão que utiliza o comando history.back() para voltar à página anterior.
+
+    - Enviar: Um botão para enviar os dados do formulário. A validação de preenchimento dos campos ocorre antes de enviar o formulário.
+
+### style.css
+
+#### O arquivo CSS fornece o estilo visual do formulário, incluindo:
+
+    - Layout responsivo: O formulário se adapta automaticamente a diferentes tamanhos de tela, como dispositivos móveis e desktop.
+          
+
+    - Botões com animação: Os botões têm um efeito de hover que altera a cor quando o usuário passa o mouse sobre eles.
+          
+    - Caixas de entrada com bordas arredondadas e transições suaves.
+
 
 ### Integrantes: 
 Gabriel Souza Martins RA: 10723188 \
