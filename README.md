@@ -237,6 +237,5 @@ Com media queries, o layout se adapta a diferentes tamanhos de tela.
 
 ### Integrantes: 
 Gabriel Souza Martins RA: 10723188 \
-Giulia Del Ry Ribeiro RA: 10723383 \
 Laura Rocha Yaguiu RA: 10736399 \
 Stephanie Julia Soares Dias RA: 10223952
