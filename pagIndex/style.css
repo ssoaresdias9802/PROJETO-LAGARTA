@@ -547,4 +547,7 @@ body {
     .contatos-header h2 {
         font-size: 6rem;
     }
+    .nav-links desktop-nav a:hover{
+        padding:5px;
+    }
 }
