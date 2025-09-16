@@ -27,15 +27,15 @@
 
       <div class="btns">
         <button type="button" class="voltar" onclick="history.back()">Voltar</button>
-        <button type="submit" class="enviar">Enviar</button>
+        <button type="submit" id="enviar" class="enviar">Enviar</button>
       </div>
     </form>
   </section>
-   <script>
-  
-    const botao = document.getElementById('enviar');
+  <script>
+    const form = document.getElementById('formCadastro');
 
-    botao.onSubmit('click', function() {
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // evita o envio real
       alert('Você realizou o cadastro com sucesso!');
     });
   </script>
