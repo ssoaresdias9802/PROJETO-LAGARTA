@@ -551,3 +551,12 @@ body {
         padding:5px;
     }
 }
+}
+.nav-link{
+    transition:0.5s;
+}
+.nav-link:hover{
+    padding:0px 5px;
+    
+
+}
