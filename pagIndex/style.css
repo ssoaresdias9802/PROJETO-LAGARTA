@@ -552,11 +552,10 @@ body {
     }
 }
 }
-.nav-link {
-    padding: 0px 10px;          
-    transition: padding 0.3s ease; 
+nav a {
+    transition: 0.3s;
 }
-
-.nav-link:hover {
-    padding: 0px 20px;           
+nav a:hover{
+    transform: scale(1.1);  
+    transform: translateX(5px);  
 }
