@@ -551,11 +551,13 @@ body {
         padding:5px;
     }
 }
-}
 nav a {
     transition: 0.3s;
+    padding:10px;
+    
 }
-nav a:hover{
-    transform: scale(1.1);  
-    transform: translateX(5px);  
+
+nav a:hover {
+    background-color: #b663636c;
+    border-radius: 20px;
 }
