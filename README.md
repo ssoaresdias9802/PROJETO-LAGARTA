@@ -471,9 +471,32 @@ Os botões permitem ações do usuário:
 -Botões empilham verticalmente (flex-direction: column) para facilitar toque em celulares.
 
 
+####JavaScript
 
+### O botão é identificado pelo ID dark-mode-toggle.
 
+-Quando clicado, ele adiciona ou remove a classe dark-mode do elemento <body>.
 
+-Ao mesmo tempo, o ícone do botão muda automaticamente, indicando qual modo está ativo:
+
+-☀️ aparece quando o modo escuro está ativado.
+
+-🌙 aparece quando o modo claro está ativado.
+
+<!--
+const darkModeBtn = document.getElementById('dark-mode-toggle');
+
+darkModeBtn.addEventListener('click', () => {
+  
+  document.body.classList.toggle('dark-mode');
+  
+  if (document.body.classList.contains('dark-mode')) {
+      darkModeBtn.textContent = "☀️"; // Ícone de sol para modo escuro
+  } else {
+      darkModeBtn.textContent = "🌙"; // Ícone de lua para modo claro
+  }
+});
+-->
 
 
 ### Integrantes: 
