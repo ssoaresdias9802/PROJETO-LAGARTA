@@ -452,6 +452,28 @@ Os botões permitem ações do usuário:
 
 -Botões empilham verticalmente (flex-direction: column) para facilitar toque em celulares.
 
+
+
+const darkModeBtn = document.getElementById('dark-mode-toggle');
+
+
+darkModeBtn.addEventListener('click', () => {
+  
+ 
+  document.body.classList.toggle('dark-mode');
+  
+
+  if (document.body.classList.contains('dark-mode')) {
+      darkModeBtn.textContent = "☀️"; // Ícone de sol para modo escuro
+  } else {
+      darkModeBtn.textContent = "🌙"; // Ícone de lua para modo claro
+  }
+});
+
+
+
+### Funcionalidade Extra: Botão de Modo Escuro(js)
+
 ### Integrantes: 
 Gabriel Souza Martins RA: 10723188 \
 Laura Rocha Yaguiu RA: 10736399 \
