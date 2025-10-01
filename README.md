@@ -483,6 +483,26 @@ Os botões permitem ações do usuário:
 
 -🌙 aparece quando o modo claro está ativado.
 
+
+### Validação do Formulário.
+
+-O evento é disparado quando o documento termina de carregar (DOMContentLoaded).
+
+-O formulário é identificado pelo ID form-card.
+
+-Ao submeter o formulário, a função impede o envio real com event.preventDefault().
+
+-Em seguida, exibe um alert confirmando o envio: "Formulário enviado com sucesso!".
+
+
+      document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('form-card').addEventListener('submit', function(event) {
+          event.preventDefault(); // impede envio real do formulário
+        alert("Formulário enviado com sucesso!");
+      });
+    });
+
+
 ### Integrantes: 
 Gabriel Souza Martins RA: 10723188 \
 Laura Rocha Yaguiu RA: 10736399 \
