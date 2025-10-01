@@ -237,7 +237,8 @@ O <head> contém informações importantes sobre a página, como:
 
 ### Funcionalidade Extra: Botão de Modo Escuro
 
-<!--const darkModeBtn = document.getElementById('dark-mode-toggle');
+<!--
+const darkModeBtn = document.getElementById('dark-mode-toggle');
 
 // Detecta o clique no botão
 darkModeBtn.addEventListener('click', () => {
@@ -251,7 +252,8 @@ darkModeBtn.addEventListener('click', () => {
   } else {
       darkModeBtn.textContent = "🌙"; // Ícone de lua para modo claro
   }
-}); -->
+}); 
+-->
 
 ## Estrutura Formulário
 
