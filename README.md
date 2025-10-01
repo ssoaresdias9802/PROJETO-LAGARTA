@@ -235,25 +235,6 @@ O <head> contém informações importantes sobre a página, como:
     </head>
 
 
-### Funcionalidade Extra: Botão de Modo Escuro
-
-<!--
-const darkModeBtn = document.getElementById('dark-mode-toggle');
-
-// Detecta o clique no botão
-darkModeBtn.addEventListener('click', () => {
-  
-  // Alterna a classe 'dark-mode' no body
-  document.body.classList.toggle('dark-mode');
-  
-  // Altera o ícone conforme o modo atual
-  if (document.body.classList.contains('dark-mode')) {
-      darkModeBtn.textContent = "☀️"; // Ícone de sol para modo escuro
-  } else {
-      darkModeBtn.textContent = "🌙"; // Ícone de lua para modo claro
-  }
-}); 
--->
 
 ## Estrutura Formulário
 
@@ -471,9 +452,28 @@ Os botões permitem ações do usuário:
 -Botões empilham verticalmente (flex-direction: column) para facilitar toque em celulares.
 
 
-####JavaScript
 
-### O botão é identificado pelo ID dark-mode-toggle.
+
+### O botão é identificado pelo ID dark-mode-toggle(sj).
+
+
+    const darkModeBtn = document.getElementById('dark-mode-toggle');
+
+
+    darkModeBtn.addEventListener('click', () => {
+  
+
+    document.body.classList.toggle('dark-mode');
+  
+
+    if (document.body.classList.contains('dark-mode')) {
+      darkModeBtn.textContent = "☀️"; // Ícone de sol para modo escuro
+    } else {
+      darkModeBtn.textContent = "🌙"; // Ícone de lua para modo claro
+    }
+    });
+
+-O botão é identificado pelo ID dark-mode-toggle.
 
 -Quando clicado, ele adiciona ou remove a classe dark-mode do elemento <body>.
 
@@ -482,22 +482,6 @@ Os botões permitem ações do usuário:
 -☀️ aparece quando o modo escuro está ativado.
 
 -🌙 aparece quando o modo claro está ativado.
-
-<!--
-const darkModeBtn = document.getElementById('dark-mode-toggle');
-
-darkModeBtn.addEventListener('click', () => {
-  
-  document.body.classList.toggle('dark-mode');
-  
-  if (document.body.classList.contains('dark-mode')) {
-      darkModeBtn.textContent = "☀️"; // Ícone de sol para modo escuro
-  } else {
-      darkModeBtn.textContent = "🌙"; // Ícone de lua para modo claro
-  }
-});
--->
-
 
 ### Integrantes: 
 Gabriel Souza Martins RA: 10723188 \
