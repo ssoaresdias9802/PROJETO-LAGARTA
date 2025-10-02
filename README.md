@@ -454,7 +454,7 @@ Os botões permitem ações do usuário:
 
 
 
-### O botão é identificado pelo ID dark-mode-toggle(sj).
+### Modo notuno.
 
 
     const darkModeBtn = document.getElementById('dark-mode-toggle');
